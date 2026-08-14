@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/cupertino.dart';
-import 'package:history_in_the_making/core/theme/liquid_glass_theme.dart';
+import 'package:yesterdays/core/theme/liquid_glass_theme.dart';
 
 class LiquidBackground extends StatefulWidget {
   final Widget child;

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:history_in_the_making/core/theme/liquid_glass_theme.dart';
-import 'package:history_in_the_making/core/theme/widgets/glass_container.dart';
+import 'package:yesterdays/core/theme/liquid_glass_theme.dart';
+import 'package:yesterdays/core/theme/widgets/glass_container.dart';
 
 class StreakStatsCard extends StatelessWidget {
   final int streakCount;

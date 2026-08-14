@@ -2,17 +2,17 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:history_in_the_making/core/theme/liquid_glass_theme.dart';
-import 'package:history_in_the_making/core/theme/widgets/glass_container.dart';
-import 'package:history_in_the_making/core/theme/widgets/liquid_background.dart';
-import 'package:history_in_the_making/core/theme/widgets/liquid_glass_tab_bar.dart';
-import 'package:history_in_the_making/core/utils/date_formatter.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/providers/history_providers.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/screens/alarm_settings_screen.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/screens/entry_editor_screen.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/screens/history_list_screen.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/widgets/entry_card.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/widgets/yesterday_alarm_banner.dart';
+import 'package:yesterdays/core/theme/liquid_glass_theme.dart';
+import 'package:yesterdays/core/theme/widgets/glass_container.dart';
+import 'package:yesterdays/core/theme/widgets/liquid_background.dart';
+import 'package:yesterdays/core/theme/widgets/liquid_glass_tab_bar.dart';
+import 'package:yesterdays/core/utils/date_formatter.dart';
+import 'package:yesterdays/features/daily_history/presentation/providers/history_providers.dart';
+import 'package:yesterdays/features/daily_history/presentation/screens/alarm_settings_screen.dart';
+import 'package:yesterdays/features/daily_history/presentation/screens/entry_editor_screen.dart';
+import 'package:yesterdays/features/daily_history/presentation/screens/history_list_screen.dart';
+import 'package:yesterdays/features/daily_history/presentation/widgets/entry_card.dart';
+import 'package:yesterdays/features/daily_history/presentation/widgets/yesterday_alarm_banner.dart';
 
 class MainNavigationScreen extends ConsumerStatefulWidget {
   const MainNavigationScreen({super.key});
@@ -119,11 +119,12 @@ class HomeDashboardTab extends ConsumerWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          'Life History',
+                          'Yesterdays',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 34,
                             color: CupertinoColors.white,
+                            fontFamily: 'Quicksand',
                             letterSpacing: -0.8,
                           ),
                         ),
@@ -134,6 +135,7 @@ class HomeDashboardTab extends ConsumerWidget {
                               : 'Record your personal history daily.',
                           style: TextStyle(
                             fontSize: 13,
+                            fontFamily: 'Quicksand',
                             color: CupertinoColors.white.withOpacity(0.65),
                           ),
                         ),
@@ -177,6 +179,7 @@ class HomeDashboardTab extends ConsumerWidget {
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16.5,
+                            fontFamily: 'Quicksand',
                             color: CupertinoColors.white,
                             letterSpacing: -0.3,
                           ),
@@ -219,6 +222,7 @@ class HomeDashboardTab extends ConsumerWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 17,
+                    fontFamily: 'Quicksand',
                     color: CupertinoColors.white,
                     letterSpacing: -0.4,
                   ),
@@ -253,6 +257,7 @@ class HomeDashboardTab extends ConsumerWidget {
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
+                                    fontFamily: 'Quicksand',
                                     color: CupertinoColors.white,
                                   ),
                                 ),
@@ -262,6 +267,7 @@ class HomeDashboardTab extends ConsumerWidget {
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
                                     fontSize: 13,
+                                    fontFamily: 'Quicksand',
                                     color: CupertinoColors.white
                                         .withOpacity(0.6),
                                   ),

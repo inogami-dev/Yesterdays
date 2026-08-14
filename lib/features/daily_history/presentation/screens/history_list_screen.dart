@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:history_in_the_making/core/theme/widgets/glass_container.dart';
-import 'package:history_in_the_making/core/theme/widgets/liquid_background.dart';
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/providers/history_providers.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/screens/entry_editor_screen.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/widgets/entry_card.dart';
+import 'package:yesterdays/core/theme/widgets/glass_container.dart';
+import 'package:yesterdays/core/theme/widgets/liquid_background.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/features/daily_history/presentation/providers/history_providers.dart';
+import 'package:yesterdays/features/daily_history/presentation/screens/entry_editor_screen.dart';
+import 'package:yesterdays/features/daily_history/presentation/widgets/entry_card.dart';
 
 class HistoryListScreen extends ConsumerStatefulWidget {
   const HistoryListScreen({super.key});

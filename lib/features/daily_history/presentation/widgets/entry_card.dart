@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:history_in_the_making/core/theme/liquid_glass_theme.dart';
-import 'package:history_in_the_making/core/theme/widgets/glass_container.dart';
-import 'package:history_in_the_making/core/utils/date_formatter.dart';
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/core/theme/liquid_glass_theme.dart';
+import 'package:yesterdays/core/theme/widgets/glass_container.dart';
+import 'package:yesterdays/core/utils/date_formatter.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
 
 class EntryCard extends StatelessWidget {
   final HistoryEntry entry;

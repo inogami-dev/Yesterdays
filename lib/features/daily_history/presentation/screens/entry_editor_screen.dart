@@ -2,13 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart' show LinearProgressIndicator, AlwaysStoppedAnimation;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hugeicons/hugeicons.dart';
-import 'package:history_in_the_making/core/theme/liquid_glass_theme.dart';
-import 'package:history_in_the_making/core/theme/widgets/glass_container.dart';
-import 'package:history_in_the_making/core/theme/widgets/liquid_background.dart';
-import 'package:history_in_the_making/core/utils/date_formatter.dart';
-import 'package:history_in_the_making/core/utils/word_counter.dart';
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
-import 'package:history_in_the_making/features/daily_history/presentation/providers/history_providers.dart';
+import 'package:yesterdays/core/theme/liquid_glass_theme.dart';
+import 'package:yesterdays/core/theme/widgets/glass_container.dart';
+import 'package:yesterdays/core/theme/widgets/liquid_background.dart';
+import 'package:yesterdays/core/utils/date_formatter.dart';
+import 'package:yesterdays/core/utils/word_counter.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/features/daily_history/presentation/providers/history_providers.dart';
 
 class EntryEditorScreen extends ConsumerStatefulWidget {
   final String dateKey;

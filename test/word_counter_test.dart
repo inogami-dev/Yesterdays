@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:history_in_the_making/core/utils/date_formatter.dart';
-import 'package:history_in_the_making/core/utils/word_counter.dart';
+import 'package:yesterdays/core/utils/date_formatter.dart';
+import 'package:yesterdays/core/utils/word_counter.dart';
 
 void main() {
   group('WordCounter Unit Tests', () {

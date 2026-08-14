@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
 
     <application
-        android:label="History in the Making"
+        android:label="Yesterdays"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

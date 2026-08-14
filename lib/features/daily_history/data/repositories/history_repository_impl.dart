@@ -1,7 +1,7 @@
-import 'package:history_in_the_making/core/utils/date_formatter.dart';
-import 'package:history_in_the_making/features/daily_history/data/datasources/history_local_datasource.dart';
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
-import 'package:history_in_the_making/features/daily_history/domain/repositories/history_repository.dart';
+import 'package:yesterdays/core/utils/date_formatter.dart';
+import 'package:yesterdays/features/daily_history/data/datasources/history_local_datasource.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/features/daily_history/domain/repositories/history_repository.dart';
 
 class HistoryRepositoryImpl implements HistoryRepository {
   final HistoryLocalDatasource localDatasource;

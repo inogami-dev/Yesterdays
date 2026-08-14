@@ -1,10 +1,10 @@
 import 'package:sqflite/sqflite.dart';
-import 'package:history_in_the_making/core/database/database_helper.dart';
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/core/database/database_helper.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
 
 class HistoryLocalDatasource {
   Future<HistoryEntry?> getEntryByDate(String dateKey) async {
-    final db = await DatabaseHelper.database;
+    final db = await DatabaseHelper.instance.database;
     final maps = await db.query(
       DatabaseHelper.tableEntries,
       where: 'id = ?',
@@ -19,7 +19,7 @@ class HistoryLocalDatasource {
   }
 
   Future<List<HistoryEntry>> getAllEntries() async {
-    final db = await DatabaseHelper.database;
+    final db = await DatabaseHelper.instance.database;
     final maps = await db.query(
       DatabaseHelper.tableEntries,
       orderBy: 'date DESC',
@@ -29,7 +29,7 @@ class HistoryLocalDatasource {
   }
 
   Future<void> saveEntry(HistoryEntry entry) async {
-    final db = await DatabaseHelper.database;
+    final db = await DatabaseHelper.instance.database;
     await db.insert(
       DatabaseHelper.tableEntries,
       entry.toMap(),
@@ -38,7 +38,7 @@ class HistoryLocalDatasource {
   }
 
   Future<void> deleteEntry(String dateKey) async {
-    final db = await DatabaseHelper.database;
+    final db = await DatabaseHelper.instance.database;
     await db.delete(
       DatabaseHelper.tableEntries,
       where: 'id = ?',

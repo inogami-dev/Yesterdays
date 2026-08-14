@@ -2,37 +2,46 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseHelper {
-  static const String dbName = 'history_in_the_making.db';
-  static const int dbVersion = 1;
-  static const String tableEntries = 'history_entries';
-
+  static final DatabaseHelper instance = DatabaseHelper._init();
   static Database? _database;
 
-  static Future<Database> get database async {
+  DatabaseHelper._init();
+
+  static const String dbName = 'yesterdays.db';
+  static const String tableEntries = 'history_entries';
+
+  Future<Database> get database async {
     if (_database != null) return _database!;
-    _database = await _initDatabase();
+    _database = await _initDB(dbName);
     return _database!;
   }
 
-  static Future<Database> _initDatabase() async {
+  Future<Database> _initDB(String filePath) async {
     final dbPath = await getDatabasesPath();
-    final path = join(dbPath, dbName);
+    final path = join(dbPath, filePath);
 
     return await openDatabase(
       path,
-      version: dbVersion,
-      onCreate: (db, version) async {
-        await db.execute('''
-          CREATE TABLE $tableEntries (
-            id TEXT PRIMARY KEY,
-            date TEXT NOT NULL,
-            content TEXT NOT NULL,
-            word_count INTEGER NOT NULL,
-            created_at TEXT NOT NULL,
-            updated_at TEXT NOT NULL
-          )
-        ''');
-      },
+      version: 1,
+      onCreate: _createDB,
     );
+  }
+
+  Future<void> _createDB(Database db, int version) async {
+    await db.execute('''
+      CREATE TABLE $tableEntries (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        date TEXT NOT NULL UNIQUE,
+        content TEXT NOT NULL,
+        wordCount INTEGER NOT NULL,
+        createdAt TEXT NOT NULL,
+        updatedAt TEXT NOT NULL
+      )
+    ''');
+  }
+
+  Future<void> close() async {
+    final db = await instance.database;
+    db.close();
   }
 }

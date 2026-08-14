@@ -1,4 +1,4 @@
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
 
 abstract class HistoryRepository {
   Future<HistoryEntry?> getEntryByDate(String dateKey);

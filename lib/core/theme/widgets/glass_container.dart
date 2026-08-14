@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
-import 'package:history_in_the_making/core/theme/liquid_glass_theme.dart';
+import 'package:yesterdays/core/theme/liquid_glass_theme.dart';
 
 class GlassContainer extends StatelessWidget {
   final Widget child;

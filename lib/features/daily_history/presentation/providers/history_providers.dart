@@ -1,11 +1,11 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:history_in_the_making/core/notifications/alarm_service.dart';
-import 'package:history_in_the_making/core/utils/date_formatter.dart';
-import 'package:history_in_the_making/core/utils/word_counter.dart';
-import 'package:history_in_the_making/features/daily_history/data/datasources/history_local_datasource.dart';
-import 'package:history_in_the_making/features/daily_history/data/repositories/history_repository_impl.dart';
-import 'package:history_in_the_making/features/daily_history/domain/models/history_entry.dart';
-import 'package:history_in_the_making/features/daily_history/domain/repositories/history_repository.dart';
+import 'package:yesterdays/core/notifications/alarm_service.dart';
+import 'package:yesterdays/core/utils/date_formatter.dart';
+import 'package:yesterdays/core/utils/word_counter.dart';
+import 'package:yesterdays/features/daily_history/data/datasources/history_local_datasource.dart';
+import 'package:yesterdays/features/daily_history/data/repositories/history_repository_impl.dart';
+import 'package:yesterdays/features/daily_history/domain/models/history_entry.dart';
+import 'package:yesterdays/features/daily_history/domain/repositories/history_repository.dart';
 
 final historyDatasourceProvider = Provider<HistoryLocalDatasource>((ref) {
   return HistoryLocalDatasource();
